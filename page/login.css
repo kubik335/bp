@@ -1,0 +1,76 @@
+@media only screen and (max-width: 680px) {
+
+#loginPage {
+    width: 100%;
+}   
+
+#loginForm {
+    width: 100%;
+}
+
+}
+html, body{
+    height: 100%;
+}
+
+
+#loginPage {
+    width: 60%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+#loginForm {
+    width: 50%;
+    z-index: 1;
+    background: #FFFFFF;
+    padding: 45px;
+    align-self: center;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+input {
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+#error{
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border: 3px solid red;
+}
+
+#loginForm button {
+  text-transform: uppercase;
+  outline: 0;
+  background: #90B9F5;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  font-size: 14px;
+  color: black;
+  cursor: pointer;
+}
+#loginForm button:hover,#loginForm button:active,#loginForm button:focus {
+  background: #90B9FF;
+}
+
+body {
+  background: #90B8DC; /* fallback for old browsers */
+  background: linear-gradient(to left, #90B8DC, #8DE8F3);    
+  margin: 0;
+  padding: 0;
+}
