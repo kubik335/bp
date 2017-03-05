@@ -15,7 +15,7 @@ before_script:
     - sudo apt-get update
     - sudo apt-get install php7.0
     - sudo apt-get install php7.0-mysql
-    - sudo apt-get install pdo_mysql
+    #- sudo apt-get install pdo_mysql
     - sudo phpenmod pdo_mysql
     - sudo /etc/init.d/apache2 restart
     #- sudo apt-get install libapache2-mod-php php-mysql
