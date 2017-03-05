@@ -15,7 +15,7 @@ before_script:
     - sudo service apache2 restart
     - ls -la
     - cd ..
-    -ls -la
+    - ls -la
     - cd ..
     - ls -la
     - cd ..
