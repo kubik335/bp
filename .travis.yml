@@ -26,9 +26,9 @@ before_script:
     #- sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password password'
     #- sudo apt-get -y install mysql-server mysql-common mysql-client
     #- sudo service apache2 restart
-    - mysql -u root
-    - show databases;
-    - exit;
+    #- mysql -u root
+    #- show databases;
+    #- exit;
     - cd /
     - sudo cp -f /home/travis/build/kubik335/bp/page/* /var/www/
     - sudo rm -f /var/www/index.html
