@@ -33,18 +33,19 @@ before_script:
     - sudo cp -f /home/travis/build/kubik335/bp/page/* /var/www/
     - sudo rm -f /var/www/index.html
     - sudo php -f /var/www/db_conf.php
-    - sudo -i
+    #- sudo -i
     #- chmod 740 /var/lib/mysql
-    - cd /var/lib/mysql
-    - ls -la
+    #- cd /var/lib/mysql
+    #- ls -la
+    - mysql -u root
+    - "echo show databases;"
 
 script:
     - sudo php -f /var/www/db_conf.php
     #- chmod 740 /var/lib/mysql
     #- sudo cd /var/lib/mysql
     #- ls -la
-    #- mysql -u root
-    #- "echo show databases;"
+
 
 env:
   matrix:
