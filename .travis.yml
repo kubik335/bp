@@ -15,36 +15,18 @@ before_script:
     - sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password password'
     - sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password password'
     - sudo apt-get -y install mysql-server
-    - cd ..
-    - ls -la
-    - pwd
-    - cd ..
-    - ls -la
-    - pwd
-    - cd ..
-    - ls -la
-    - pwd
-    - cd ..
-    - ls -la
-    - pwd
-    - cd ..
-    - ls -la
-    - pwd
     - cd $HOME
-    - ls -la
-    - pwd
+    - cd ..
     - cd ..
     - ls -la
     - pwd
-    - cd ..
+    - cd var
+    - ls -la
+    - cd www
+    - ls -la
+    - cd html
     - ls -la
     - pwd
-    #- cd var
-    #- ls -la
-    #- cd www
-    #- ls -la
-    #- cd html
-    #- ls -la
 
 
 
