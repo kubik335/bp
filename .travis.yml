@@ -35,8 +35,8 @@ before_script:
 
 script:
     - sudo php -f /var/www/db_conf.php
-    - chmod 740 /var/lib/mysql
-    - cd /var/lib/mysql
+    #- chmod 740 /var/lib/mysql
+    - sudo cd /var/lib/mysql
     - ls -la
     #- mysql -u root
     #- "echo show databases;"
