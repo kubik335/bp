@@ -17,19 +17,28 @@ before_script:
     - sudo apt-get -y install mysql-server
     - cd ..
     - ls -la
+    - pwd
     - cd ..
     - ls -la
+    - pwd
     - cd ..
     - ls -la
+    - pwd
     - cd ..
     - ls -la
+    - pwd
     - cd ..
+    - ls -la
+    - pwd
     - cd $HOME
     - ls -la
+    - pwd
     - cd ..
     - ls -la
-    - cd travis
+    - pwd
+    - cd ..
     - ls -la
+    - pwd
     #- cd var
     #- ls -la
     #- cd www
