@@ -22,6 +22,14 @@ before_script:
     #- cd ..
     - cd $HOME
     - ls -la
+    - cd ..
+    - ls -la
+    #- cd var
+    #- ls -la
+    #- cd www
+    #- ls -la
+    #- cd html
+    #- ls -la
 
 
 
