@@ -9,44 +9,19 @@ before_script:
     - sudo apt-get update
     - sudo apt-get install apache2
     - sudo service apache2 restart
-    #- sudo apt-get install php5-mysql
-    #- sudo apt-get install php7.0-mysql
     - sudo apt-add-repository ppa:ondrej/php -y
     - sudo apt-get update
     - sudo apt-get install php7.0
     - sudo apt-get install php7.0-mysql
-    #- sudo apt-get install pdo_mysql
     - sudo phpenmod pdo_mysql
     - sudo /etc/init.d/apache2 restart
-    #- sudo apt-get install libapache2-mod-php php-mysql
-    #- sudo apt-get install php-mysql
-    #- sudo apt-get install pdo-mysql php5-mysql
-    #- sudo service apache2 restart
-    #- sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password password'
-    #- sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password password'
-    #- sudo apt-get -y install mysql-server mysql-common mysql-client
-    #- sudo service apache2 restart
-    #- mysql -u root
-    #- show databases;
-    #- exit;
     - cd /
     - sudo cp -f /home/travis/build/kubik335/bp/page/* /var/www/
     - sudo rm -f /var/www/index.html
-    - sudo php -f /var/www/db_conf.php
-    #- sudo -i
-    #- chmod 740 /var/lib/mysql
-    #- cd /var/lib/mysql
-    #- ls -la
-    - sudo -u mysql ls -al /var/lib/mysql
-    #- mysql -u root
-    #- "echo show databases;"
 
 script:
     - sudo php -f /var/www/db_conf.php
-    #- chmod 740 /var/lib/mysql
-    #- sudo cd /var/lib/mysql
-    #- ls -la
-
+    - sudo -u mysql ls -al /var/lib/mysql
 
 env:
   matrix:
