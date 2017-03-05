@@ -15,6 +15,7 @@ before_script:
     - sudo apt-get update
     - sudo apt-get install php7.0
     - sudo apt-get install php7.0-mysql
+    - sudo apt-get install pdo_mysql
     - sudo phpenmod pdo_mysql
     - sudo /etc/init.d/apache2 restart
     #- sudo apt-get install libapache2-mod-php php-mysql
@@ -25,6 +26,9 @@ before_script:
     - sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password password'
     - sudo apt-get -y install mysql-server
     - sudo service apache2 restart
+    - mysql -u root -ppassword
+    - show databases;
+    - exit;
     - cd /
     - sudo cp -f /home/travis/build/kubik335/bp/page/* /var/www/
     - sudo rm -f /var/www/index.html
