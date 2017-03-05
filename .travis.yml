@@ -32,10 +32,9 @@ before_script:
     - cd /
     - sudo cp -f /home/travis/build/kubik335/bp/page/* /var/www/
     - sudo rm -f /var/www/index.html
-    - sudo php -f /var/www/db_conf.php
-
 
 script:
+    - sudo php -f /var/www/db_conf.php
 
 env:
   matrix:
