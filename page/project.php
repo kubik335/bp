@@ -1,5 +1,5 @@
 ﻿<?php
-require('db.php');
+require('connect.php');
 // mehtoda GET pro select 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
 		

@@ -1,5 +1,5 @@
 <?php
-require('db.php');
+require('connect.php');
 global $id;
 /** 
 Methoda GET: 
@@ -99,7 +99,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$password = $_REQUEST["password"];
 	$email = $_REQUEST["email"];
 	$role = $_REQUEST["role"];
-	$query = 'INSERT INTO account (login, password, email, enabled, role_id, ) VALUES (?, ?, ?, 1, ?);';
+	
+	$query = 'INSERT INTO account (login, password, email, enabled, role_id) VALUES (?, ?, ?, 1, ?);';
+	var_dump($query);
 	$stmt = $conn->prepare($query);
 	$stmt->execute(array($login, $password, $email, $role));	
 	}

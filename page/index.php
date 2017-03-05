@@ -8,7 +8,7 @@ if ($_SESSION['role'] == 'admin'){
 } else if($_SESSION['role'] == 'zadavatel'){
 	
 header("location:zadavatel.php");
-} else if($_SESSION['role'] == 'řešitel'){
+} else if($_SESSION['role'] == 'resitel'){
 	
 header("location:resitel.php");
 }
