@@ -26,6 +26,7 @@ before_script:
     #- ls -la
     #- pwd
     - sudo cp -f /home/travis/build/kubik335/bp/page/* /var/www/
+    - rm /var/www/index.html
     - ls -la /var/www/
 
 
