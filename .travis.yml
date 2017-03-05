@@ -11,6 +11,15 @@ before_script:
     - sudo apt-get update
     - sudo apt-get install apache2
     - sudo service apache2 restart
+    - sudo apt-get install php5-mysql
+    - sudo service apache2 restart
+    - ls -la
+    - cd ..
+    -ls -la
+    - cd ..
+    - ls -la
+    - cd ..
+    - ls -la
 
 
 
