@@ -35,8 +35,10 @@ before_script:
 
 script:
     - sudo php -f /var/www/db_conf.php
-    - mysql -u root
-    - "echo show databases;"
+    - cd /var/lib/mysql
+    - ls -la
+    #- mysql -u root
+    #- "echo show databases;"
 
 env:
   matrix:
