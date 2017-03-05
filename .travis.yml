@@ -1,4 +1,4 @@
-language: php, java
+language: php java
 
 sudo: required
 
