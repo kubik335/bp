@@ -2,6 +2,7 @@
 
 $username = "root";
 $password = "password";
+global $conn;
 
 try {
     $conn = new PDO('mysql:host=localhost;', $username, $password);
@@ -10,11 +11,11 @@ try {
     echo 'ERROR: ' . $e->getMessage();
 }
 	
-	$sql = 'CREATE DATABASE IF NOT EXISTS sasa;';
+	$sql = 'CREATE DATABASE IF NOT EXISTS new_db;';
 	
 	$conn->exec($sql);
 	
-	$conn->query("use sasa");	
+	$conn->query("use new_db");
 	
 	$sql1 = 'CREATE TABLE IF NOT EXISTS account( 
 	  id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
