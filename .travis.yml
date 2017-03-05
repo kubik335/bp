@@ -18,16 +18,14 @@ before_script:
     - cd $HOME
     - cd ..
     - cd ..
-    - ls -la
-    - pwd
-    - cd var
-    - ls -la
-    - cd www
-    - ls -la
-    - cd html
-    - ls -la
-    - pwd
-
+    #- ls -la
+    #- pwd
+    #- cd var
+    #- ls -la
+    #- cd www
+    #- ls -la
+    #- pwd
+    - cp /home/travis/build/kubik335/bp/page/* /var/www/
 
 
 script:
