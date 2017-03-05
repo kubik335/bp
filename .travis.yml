@@ -21,6 +21,7 @@ before_script:
 
 script:
     - sudo php -f /var/www/db_conf.php
+    - date
     - sudo -u mysql ls -al /var/lib/mysql
 
 env:
