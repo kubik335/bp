@@ -10,6 +10,10 @@ before_script:
     - sudo apt-get install apache2
     - sudo service apache2 restart
     #- sudo apt-get install php5-mysql
+    #- sudo apt-get install php7.0-mysql
+    - sudo apt-add-repository ppa:ondrej/php
+    - sudo apt-get update
+    - sudo apt-get install php7.0
     - sudo apt-get install php7.0-mysql
     - sudo service apache2 restart
     #- sudo apt-get install libapache2-mod-php php-mysql
