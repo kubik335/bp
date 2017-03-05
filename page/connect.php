@@ -2,8 +2,8 @@
 
    $dbhost = 'localhost';
    $dbuser = 'root';
-   $dbpass = 'eAqAsA5';
-   $dbname = 'my_table';
+   $dbpass = '';
+   $dbname = 'new_db';
 	global $conn;   
    
 try {
