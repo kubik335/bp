@@ -1,6 +1,6 @@
 language: php, java
 
-sudo: true
+sudo: required
 
 php:
   - '5.4'
