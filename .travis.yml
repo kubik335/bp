@@ -16,12 +16,9 @@ before_script:
     - sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password password'
     - sudo apt-get -y install mysql-server
     - cd /
-    #- cd $HOME
-    #- cd ..
-    #- cd ..
     - sudo cp -f /home/travis/build/kubik335/bp/page/* /var/www/
     - sudo rm -f /var/www/index.html
-    - ls -la /var/www/
+    - sudo php -f /var/www/db_conf.php
 
 
 script:
