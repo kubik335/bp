@@ -8,6 +8,16 @@ sudo: required
 php:
   - '5.6'
 
+before_install:
+  - "chmod 777 ~/.ssh/known_hosts"
+  - "echo $KNOWN_HOSTS >> ~/.ssh/id_rsa.pub"
+  - "echo $SSH_KEY > /home/travis/.ssh/key"
+  - "cat ~/.ssh/id_rsa.pub > ~/.ssh/authorized_keys"
+  #- "export CHROME_BIN=/usr/bin/google-chrome"
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - "today=$(date +%Y.%m.%d_%H.%M)"
+
 before_script:
     ### Chrome driver install ###
     - export CHROME_BIN=/usr/bin/google-chrome
