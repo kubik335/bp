@@ -19,8 +19,8 @@ before_install:
 
 before_script:
     - cat ~/.ssh/id_rsa.pub
-    - cat ~/.ssh/authorized_keys
-    - cat /home/travis/.ssh/key
+    - sed -e 's/#+/\s/g' ~/.ssh/id_rsa.pub > ~/.ssh/authorized_keys
+
     ### Chrome driver install ###
     - export CHROME_BIN=/usr/bin/google-chrome
     - export DISPLAY=:99.0
