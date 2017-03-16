@@ -12,14 +12,13 @@ before_install:
   - "chmod 777 ~/.ssh/known_hosts"
   - "echo $KNOWN_HOSTS >> ~/.ssh/id_rsa.pub"
   - "echo $SSH_KEY > /home/travis/.ssh/key"
-  #- "sed -e 's/s\+/\n/g' ~/.ssh/id_rsa.pub > ~/.ssh/authorized_keys"
-  #- "cat ~/.ssh/id_rsa.pub > ~/.ssh/authorized_keys"
   - "export DISPLAY=:99.0"
   - "today=$(date +%Y.%m.%d_%H.%M)"
 
 before_script:
     - cat ~/.ssh/id_rsa.pub
     - sed -e 's/#+/\s/g' ~/.ssh/id_rsa.pub > ~/.ssh/authorized_keys
+    - cat ~/.ssh/authorized_keys
 
     ### Chrome driver install ###
     - export CHROME_BIN=/usr/bin/google-chrome
