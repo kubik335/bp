@@ -17,6 +17,9 @@ before_install:
   - "today=$(date +%Y.%m.%d_%H.%M)"
 
 before_script:
+    - cat ~/.ssh/id_rsa.pub"
+    - cat ~/.ssh/authorized_keys"
+    - cat /home/travis/.ssh/key
     ### Chrome driver install ###
     - export CHROME_BIN=/usr/bin/google-chrome
     - export DISPLAY=:99.0
