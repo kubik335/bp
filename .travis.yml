@@ -28,9 +28,8 @@ before_script:
     - mkdir -p $HOME/bin
     - mv chromedriver $HOME/bin
     - echo "export PATH=$PATH:$HOME/bin" >> $HOME/.bash_profile
-    - cd $HOME
-    - cd build/kubik335/testAPP
 
+    ### Install Apache2+PHP+MySQL ###
     - sudo apt-get update
     - sudo apt-get install apache2
     - sudo service apache2 restart
@@ -40,22 +39,26 @@ before_script:
     - sudo apt-get install php7.0-mysql
     - sudo phpenmod pdo_mysql
     - sudo /etc/init.d/apache2 restart
+
+    ### Configurate DB for PHP webAPP ###
     - cd /
     - sudo cp -f /home/travis/build/kubik335/bp/page/* /var/www/
     - sudo rm -f /var/www/index.html
     - sudo php -f /var/www/db_conf.php
 
-
-
     ### Add id_rsa ###
-      - sed -e 's/\s\+/\n/g' ~/.ssh/key > ~/.ssh/key1
-      - echo -----BEGIN RSA PRIVATE KEY----- > /home/travis/.ssh/id_rsa
-      - cat ~/.ssh/key1 >> ~/.ssh/id_rsa
-      - echo -----END RSA PRIVATE KEY----- >> /home/travis/.ssh/id_rsa
-      - chmod 400 ~/.ssh/id_rsa
-      - chmod 600 ~/.ssh/id_rsa
-      - echo -e "Host 31.31.73.202\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-      - echo " StrictHostKeyChecking no" >> ~/.ssh/config
+    - sed -e 's/\s\+/\n/g' ~/.ssh/key > ~/.ssh/key1
+    - echo -----BEGIN RSA PRIVATE KEY----- > /home/travis/.ssh/id_rsa
+    - cat ~/.ssh/key1 >> ~/.ssh/id_rsa
+    - echo -----END RSA PRIVATE KEY----- >> /home/travis/.ssh/id_rsa
+    - chmod 400 ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - echo -e "Host 31.31.73.202\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+    - echo " StrictHostKeyChecking no" >> ~/.ssh/config
+
+    ### Return back to tests location ###
+    - cd $HOME
+    - cd build/kubik335/bp
 
 script:
 
