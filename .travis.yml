@@ -75,6 +75,8 @@ before_script:
     - cat /home/travis/build/kubik335/bp/ip.txt
     - cat /home/travis/build/kubik335/bp/ip.txt | awk '{print $1;}' > /home/travis/build/kubik335/bp/new.txt
     - cat /home/travis/build/kubik335/bp/new.txt
+    - head -n1 /home/travis/build/kubik335/bp/new.txt > /home/travis/build/kubik335/bp/new.txt
+    - cat /home/travis/build/kubik335/bp/new.txt
 
     ### Unzip tests to a folder  ###
     - cd $HOME
