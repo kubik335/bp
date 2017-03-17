@@ -84,6 +84,8 @@ script:
 
 after_script:
     - ls -la
+    - cd results
+    - ls -la
     - zip -r build_$today.zip /home/travis/build/kubik335/bp/results
     - scp -v -i ~/.ssh/id_rsa /home/travis/build/kubik335/bp/build_$today.zip root@31.31.73.202:/home/reports/
 
