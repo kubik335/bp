@@ -78,7 +78,7 @@ before_script:
     - ls -la
     - cd tests
     - ls -la
-    - cd src
+    - cd testAPP/src
     - ls -la
     - cd test
     #- mkdir tests
