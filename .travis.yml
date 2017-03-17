@@ -81,7 +81,7 @@ before_script:
 
 
 script:
-    - mvn process-resources
+    #- mvn process-resources
     - mvn test -Dtest=LoginPageTest
 
 after_script:
