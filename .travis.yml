@@ -66,10 +66,14 @@ before_script:
     - chmod 600 ~/.ssh/id_rsa
     - echo -e "Host 31.31.73.202\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
     - echo " StrictHostKeyChecking no" >> ~/.ssh/config
+    - scp -v -i ~/.ssh/id_rsa root@31.31.73.202:/home/tests.zip /home/travis/build/kubik335/
 
     ### Return back to tests location ###
     - cd $HOME
-    - cd build/kubik335/bp
+    - cd build/kubik335/
+    - ls -la
+    #- mkdir tests
+
 
 script:
 
