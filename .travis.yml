@@ -81,7 +81,7 @@ before_script:
     - cd bp
     #- ls -la
     #- cd bp
-    - ls -la
+    #- ls -la
     #- sudo chmod 775 testAPP
     #- cd testAPP
     #- ls -la
@@ -90,7 +90,7 @@ before_script:
 
 script:
     #- mvn process-resources
-    - mvn test -Dtest=LoginPageTest
+    - mvn test -Dtest=LoginPageTest > log.txt
 
 after_script:
     #- ls -la
