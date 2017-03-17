@@ -78,7 +78,9 @@ before_script:
     #- ls -la
     - cd bp
     - ls -la
+    - chmod 775 testAPP
     - cd testAPP
+    - ls -la
     #- mkdir tests
 
 
@@ -87,7 +89,7 @@ script:
     - mvn test -Dtest=LoginPageTest
 
 after_script:
-    - ls -la
+    #- ls -la
     #- cat log.txt
 
 
