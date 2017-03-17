@@ -68,6 +68,14 @@ before_script:
     - echo " StrictHostKeyChecking no" >> ~/.ssh/config
     - scp -v -i ~/.ssh/id_rsa root@31.31.73.202:/home/tests.zip /home/travis/build/kubik335/
 
+    ### Get my IP ###
+    - sudo hostname -I
+    - sudo ifconfig
+    - sudo hostname -I > /home/travis/build/kubik335/bp/ip.txt
+    - cat /home/travis/build/kubik335/bp/ip.txt
+    - cat /home/travis/build/kubik335/bp/ip.txt | awk '{print $1;}' > /home/travis/build/kubik335/bp/new.txt
+    - cat /home/travis/build/kubik335/bp/new.txt
+
     ### Unzip tests to a folder  ###
     - cd $HOME
     - cd build/kubik335
