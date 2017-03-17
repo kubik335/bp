@@ -70,11 +70,12 @@ before_script:
 
     ### Unzip tests to a folder  ###
     - cd $HOME
-    - cd build/kubik335/bp
+    - cd build/kubik335
     - sudo unzip tests.zip -d /home/travis/build/kubik335/tests
     - sudo cp -r /home/travis/build/kubik335/tests/testAPP/* /home/travis/build/kubik335/bp/
 
     ### Create repository for tests results ###
+    - cd bp
     - mkdir -p results
 
 
