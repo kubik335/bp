@@ -74,13 +74,17 @@ before_script:
     - cd $HOME
     - cd build/kubik335/
     - sudo unzip tests.zip -d /home/travis/build/kubik335/tests
-    - cd tests
+    - sudo rm -f /home/travis/build/kubik335/bp/page
+    - sudo rm -f /home/travis/build/kubik335/bp/.idea
+    - sudo cp -f /home/travis/build/kubik335/tests/testAPP/* /home/travis/build/kubik335/bp/
+
+    - cd bp
     #- ls -la
     #- cd bp
     - ls -la
-    - sudo chmod 775 testAPP
-    - cd testAPP
-    - ls -la
+    #- sudo chmod 775 testAPP
+    #- cd testAPP
+    #- ls -la
     #- mkdir tests
 
 
