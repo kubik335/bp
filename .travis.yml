@@ -16,9 +16,11 @@ before_install:
   - "today=$(date +%Y.%m.%d_%H.%M)"
 
 before_script:
-    - cat ~/.ssh/id_rsa.pub
+
+    ### Add id_rsa to authorized_keys .ssh ###
+    #- cat ~/.ssh/id_rsa.pub
     - sed -e 's/#/ /g' ~/.ssh/id_rsa.pub > ~/.ssh/authorized_keys
-    - cat ~/.ssh/authorized_keys
+    #- cat ~/.ssh/authorized_keys
 
     ### Chrome driver install ###
     - export CHROME_BIN=/usr/bin/google-chrome
@@ -71,7 +73,7 @@ before_script:
     ### Return back to tests location ###
     - cd $HOME
     - cd build/kubik335/
-    - unzip tests.zip -d /tests
+    - sudo unzip tests.zip -d /tests
     - cd tests
     - ls -la
     #- mkdir tests
