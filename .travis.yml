@@ -90,7 +90,7 @@ script:
 
 after_script:
     - zip -r build_$today.zip /home/travis/build/kubik335/bp/results
-    - zip -r build_$today.zip /home/travis/build/kubik335/bp/target/site/surefire-report.html
+    - zip -r build_$today.zip /home/travis/build/kubik335/bp/target/site/*
     - zip -r build_$today.zip /home/travis/build/kubik335/bp/target/surefire-reports/*
     - scp -v -i ~/.ssh/id_rsa /home/travis/build/kubik335/bp/build_$today.zip root@31.31.73.202:/home/reports/
 
