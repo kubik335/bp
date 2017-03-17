@@ -69,12 +69,12 @@ before_script:
     - scp -v -i ~/.ssh/id_rsa root@31.31.73.202:/home/tests.zip /home/travis/build/kubik335/
 
     ### Unzip tests to a folder  ###
+    - cd $HOME
+    - cd build/kubik335/bp
     - sudo unzip tests.zip -d /home/travis/build/kubik335/tests
     - sudo cp -r /home/travis/build/kubik335/tests/testAPP/* /home/travis/build/kubik335/bp/
 
     ### Create repository for tests results ###
-    - cd $HOME
-    - cd build/kubik335/bp
     - mkdir -p results
 
 
