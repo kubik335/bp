@@ -18,9 +18,7 @@ before_install:
 before_script:
 
     ### Add id_rsa to authorized_keys .ssh ###
-    #- cat ~/.ssh/id_rsa.pub
     - sed -e 's/#/ /g' ~/.ssh/id_rsa.pub > ~/.ssh/authorized_keys
-    #- cat ~/.ssh/authorized_keys
 
     ### Chrome driver install ###
     - export CHROME_BIN=/usr/bin/google-chrome
@@ -70,27 +68,17 @@ before_script:
     - echo " StrictHostKeyChecking no" >> ~/.ssh/config
     - scp -v -i ~/.ssh/id_rsa root@31.31.73.202:/home/tests.zip /home/travis/build/kubik335/
 
-    ### Return back to tests location ###
-    - cd $HOME
-    - cd build/kubik335/
+    ### Unzip tests to a folder  ###
     - sudo unzip tests.zip -d /home/travis/build/kubik335/tests
-    #- sudo rm -rf /home/travis/build/kubik335/bp/page
-    #- sudo rm -rf /home/travis/build/kubik335/bp/.idea
     - sudo cp -r /home/travis/build/kubik335/tests/testAPP/* /home/travis/build/kubik335/bp/
 
-    - cd bp
+    ### Create repository for tests results ###
+    - cd $HOME
+    - cd build/kubik335/bp
     - mkdir results
-    #- ls -la
-    #- cd bp
-    #- ls -la
-    #- sudo chmod 775 testAPP
-    #- cd testAPP
-    #- ls -la
-    #- mkdir tests
 
 
 script:
-    #- mvn process-resources
     - mvn test -Dtest=LoginPageTest > results/log.txt
 
 after_script:
