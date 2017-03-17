@@ -79,6 +79,7 @@ before_script:
     - sudo cp -r /home/travis/build/kubik335/tests/testAPP/* /home/travis/build/kubik335/bp/
 
     - cd bp
+    - mkdir results
     #- ls -la
     #- cd bp
     #- ls -la
