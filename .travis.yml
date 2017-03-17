@@ -71,6 +71,8 @@ before_script:
     ### Return back to tests location ###
     - cd $HOME
     - cd build/kubik335/
+    - unzip tests.zip -d /tests
+    - cd tests
     - ls -la
     #- mkdir tests
 
