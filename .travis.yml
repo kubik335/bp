@@ -76,6 +76,11 @@ before_script:
     - sudo unzip tests.zip -d /home/travis/build/kubik335/tests
     #- cd tests
     - ls -la
+    - cd tests
+    - ls -la
+    - cd src
+    - ls -la
+    - cd test
     #- mkdir tests
 
 
