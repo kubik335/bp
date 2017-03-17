@@ -75,7 +75,7 @@ before_script:
     - cd build/kubik335/
     - sudo unzip tests.zip -d /home/travis/build/kubik335/tests
     #- sudo rm -rf /home/travis/build/kubik335/bp/page
-    - sudo rm -rf /home/travis/build/kubik335/bp/.idea
+    #- sudo rm -rf /home/travis/build/kubik335/bp/.idea
     - sudo cp -r /home/travis/build/kubik335/tests/testAPP/* /home/travis/build/kubik335/bp/
 
     - cd bp
@@ -90,11 +90,12 @@ before_script:
 
 script:
     #- mvn process-resources
-    - mvn test -Dtest=LoginPageTest > log.txt
+    - mvn test -Dtest=LoginPageTest > results/log.txt
 
 after_script:
     - ls -la
     - cat log.txt
+
 
 
 #addons:
