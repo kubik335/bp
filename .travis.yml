@@ -73,12 +73,12 @@ before_script:
     ### Return back to tests location ###
     - cd $HOME
     - cd build/kubik335/
-    - sudo unzip tests.zip -d /home/travis/build/kubik335/bp
-    #- cd tests
+    - sudo unzip tests.zip -d /home/travis/build/kubik335/tests
+    - cd tests
     #- ls -la
-    - cd bp
+    #- cd bp
     - ls -la
-    - chmod 775 testAPP
+    - sudo chmod 775 testAPP
     - cd testAPP
     - ls -la
     #- mkdir tests
