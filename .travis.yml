@@ -54,6 +54,9 @@ before_script:
     ### Configurate DB for PHP webAPP ###
     - cd /
     - sudo cp -f /home/travis/build/kubik335/bp/page/* /var/www/
+    - cd /var/www/
+    - ls -la
+    - cd /
     - sudo rm -f /var/www/index.html
     - sudo php -f /var/www/db_conf.php
 
