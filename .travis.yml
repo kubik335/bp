@@ -81,11 +81,11 @@ before_script:
 
 
 script:
-    - mvn test -Dtest=LoginPageTest > log.txt
+    - mvn test -Dtest=LoginPageTest
 
 after_script:
     - ls -la
-    - cat log.txt
+    #- cat log.txt
 
 
 #addons:
