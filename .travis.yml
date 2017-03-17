@@ -76,7 +76,9 @@ before_script:
     - sudo unzip tests.zip -d /home/travis/build/kubik335/bp
     #- cd tests
     #- ls -la
-    - cd bp/testAPP
+    - cd bp
+    - ls -la
+    - cd testAPP
     #- mkdir tests
 
 
