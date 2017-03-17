@@ -75,20 +75,17 @@ before_script:
     - cd build/kubik335/
     - sudo unzip tests.zip -d /home/travis/build/kubik335/tests
     #- cd tests
-    - ls -la
-    - cd tests
-    - ls -la
-    - cd testAPP/src
-    - ls -la
-    - cd test
+    #- ls -la
+    - cd tests/testAPP
     #- mkdir tests
 
 
 script:
-
-
+    - mvn test -Dtest=LoginPageTest > log.txt
 
 after_script:
+    - ls -la
+    - cat log.txt
 
 
 #addons:
