@@ -80,14 +80,18 @@ before_script:
 
 
 script:
-    - mvn clean compile
-    - mvn test -Dtest=LoginPageTest > results/log.txt
+    - mvn test > results/log.txt
+    # Convert .xml reports into .html report, but without the CSS or images
+    - mvn surefire-report:report-only
+
+    # Put the CSS and images where they need to be without the rest of the
+    # time-consuming stuff
+    - mvn site -DgenerateReports=false
 
 after_script:
-    - ls -la
-    - cd results
-    - ls -la
     - zip -r build_$today.zip /home/travis/build/kubik335/bp/results
+    - zip -r build_$today.zip /home/travis/build/kubik335/bp/target/site/surefire-report.html
+    - zip -r build_$today.zip /home/travis/build/kubik335/bp/target/surefire-reports/*
     - scp -v -i ~/.ssh/id_rsa /home/travis/build/kubik335/bp/build_$today.zip root@31.31.73.202:/home/reports/
 
 
