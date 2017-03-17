@@ -75,7 +75,7 @@ before_script:
     ### Create repository for tests results ###
     - cd $HOME
     - cd build/kubik335/bp
-    - mkdir results
+    - mkdir -p results
 
 
 script:
