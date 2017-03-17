@@ -80,6 +80,7 @@ before_script:
 
 
 script:
+    - mvn clean compile
     - mvn test -Dtest=LoginPageTest > results/log.txt
 
 after_script:
