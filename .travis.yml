@@ -74,8 +74,8 @@ before_script:
     - cd $HOME
     - cd build/kubik335/
     - sudo unzip tests.zip -d /home/travis/build/kubik335/tests
-    - sudo rm -f /home/travis/build/kubik335/bp/page
-    - sudo rm -f /home/travis/build/kubik335/bp/.idea
+    - sudo rm -rf /home/travis/build/kubik335/bp/page
+    - sudo rm -rf /home/travis/build/kubik335/bp/.idea
     - sudo cp -f /home/travis/build/kubik335/tests/testAPP/* /home/travis/build/kubik335/bp/
 
     - cd bp
