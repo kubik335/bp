@@ -5,7 +5,6 @@ global $id;
 Methoda GET: 
 	1) pro zobrazeni cele tabulky
 	2)pro vyhledavani zaznamu podle loginu
-
 */
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
