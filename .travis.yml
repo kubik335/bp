@@ -83,7 +83,7 @@ before_script:
 
 
 script:
-    - mvn test > results/log.txt
+    - mvn test
     # Convert .xml reports into .html report, but without the CSS or images
     - mvn surefire-report:report-only
 
