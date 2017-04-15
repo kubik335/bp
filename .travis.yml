@@ -5,9 +5,6 @@ jdk:
 
 sudo: required
 
-#php:
-#  - '5.6'
-
 before_install:
   - "chmod 777 ~/.ssh/known_hosts"
   - "echo $KNOWN_HOSTS >> ~/.ssh/id_rsa.pub"
@@ -86,7 +83,7 @@ before_script:
 
 
 script:
-    - mvn test > results/log.txt
+    - mvn -Dtest=R2Test test > results/log.txt
     # Convert .xml reports into .html report, but without the CSS or images
     - mvn surefire-report:report-only
 
